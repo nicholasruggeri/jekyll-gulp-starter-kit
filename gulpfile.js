@@ -105,5 +105,5 @@ gulp.task('watch', function () {
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('guarda', ['browser-sync', 'watch']);
+gulp.task('serve', ['browser-sync', 'watch']);
 gulp.task('default', ['jekyll-build', 'js', 'sass', 'img']);
