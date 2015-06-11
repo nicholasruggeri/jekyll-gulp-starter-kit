@@ -66,6 +66,20 @@ gulp.task('js', function(){
 });
 
 /**
+ * Compile files from _src/_vendor into both _site/js (for live injecting) and site (for future jekyll builds)
+ */
+gulp.task('js:vendor', function(){
+    return gulp.src([
+            '_src/_vendor/cookies-enabler/cookies-enabler.min.js'
+        ])
+        .pipe(concat('vendor.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('_site/js'))
+        .pipe(browserSync.reload({stream:true}))
+        .pipe(gulp.dest('js'));
+});
+
+/**
  * Copy files from _src/_img into both _site/img (for live injecting) and site (for future jekyll builds)
  */
 gulp.task('img', function() {
