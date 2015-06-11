@@ -1,13 +1,9 @@
 {
   "name": "Jekyll-Gulp-Starter-Kit",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A starter project including full setup for Jekyll, GulpJS, SASS & BrowserSync",
   "main": "gulpfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "Nicholas Ruggeri",
-  "license": "ISC",
   "devDependencies": {
     "gulp": "^3.8.8",
     "gulp-sass": "^0.7.3",
