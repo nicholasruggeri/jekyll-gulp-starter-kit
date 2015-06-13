@@ -1,2 +1,4 @@
 name: Jekyll Gulp Starter Kit
+source: ./_src
+destination: ./site
 exclude: ["node_modules", "gulpfile.js", "package.json", "README.md"]
