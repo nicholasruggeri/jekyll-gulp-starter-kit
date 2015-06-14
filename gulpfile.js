@@ -105,7 +105,7 @@ gulp.task('build', function(callback) {
 
 
 /**
- * Default task, running just `gulp` will compile the sass, compile the jekyll site
+ * Default task, running just `gulp` will compile the assets and compile the jekyll site
  */
 
 gulp.task('default', ['build']);
