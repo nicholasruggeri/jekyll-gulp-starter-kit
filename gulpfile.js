@@ -41,7 +41,7 @@ gulp.task('browser-sync', function() {
 });
 
 /**
- * Compile files from _src/_scss into both _site/css (for live injecting) and site (for future jekyll builds)
+ * Compile files from _assets/_scss into site/css (for live injecting)
  */
 gulp.task('sass', function () {
     return gulp.src('_assets/_scss/main.scss')
@@ -55,7 +55,7 @@ gulp.task('sass', function () {
 });
 
 /**
- * Compile files from _src/_js into both _site/js (for live injecting) and site (for future jekyll builds)
+* Compile files from _assets/_js into site/js (for live injecting)
  */
 gulp.task('js', function(){
     return gulp.src('_assets/_js/**/*.js')
@@ -66,7 +66,7 @@ gulp.task('js', function(){
 });
 
 /**
- * Compile files from _src/_vendor into both _site/js (for live injecting) and site (for future jekyll builds)
+* Compile files from _assets/_vendor into site/js, site/css ecc (for live injecting)
  */
 gulp.task('js:vendor', function(){
     return gulp.src([
@@ -79,7 +79,7 @@ gulp.task('js:vendor', function(){
 });
 
 /**
- * Copy files from _src/_img into both _site/img (for live injecting) and site (for future jekyll builds)
+ * Copy files from _assets/_img into site/img (for live injecting)
  */
 gulp.task('img', function() {
     return gulp.src(['_assets/_img/**/*'])
@@ -89,8 +89,7 @@ gulp.task('img', function() {
 
 
 /**
- * Watch scss files for changes & recompile
- * Watch html/md files, run jekyll & reload BrowserSync
+ * Watch files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
     gulp.watch('_assets/_scss/*.scss', ['sass']);
@@ -99,21 +98,23 @@ gulp.task('watch', function () {
     gulp.watch(['_src/*.html', '_src/_layouts/*.html', '_src/_includes/*.html'], ['jekyll-rebuild']);
 });
 
-
 gulp.task('build', function(callback) {
     runSequence('jekyll-build', ['js', 'js:vendor', 'sass', 'img']);
 });
 
 
+
+/**
+ * Default task, running just `gulp` will compile the sass, compile the jekyll site
+ */
+
+gulp.task('default', ['build']);
+
+/**
+ * Running just `gulp serve` will compile the sass,
+ * compile the jekyll site, launch BrowserSync & watch files.
+ */
+
 gulp.task('serve', function(callback) {
     runSequence('jekyll-build', ['js', 'js:vendor', 'sass', 'img', 'browser-sync'], 'watch');
 });
-
-
-
-/**
- * Default task, running just `gulp` will compile the sass,
- * compile the jekyll site, launch BrowserSync & watch files.
- */
-//gulp.task('serve', ['browser-sync', 'watch']);
-gulp.task('default', ['build']);
