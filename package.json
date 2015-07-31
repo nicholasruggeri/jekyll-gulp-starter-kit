@@ -1,18 +1,20 @@
 {
   "name": "Jekyll-Gulp-Starter-Kit",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A starter project including full setup for Jekyll, GulpJS, SASS & BrowserSync",
   "main": "gulpfile.js",
   "author": "Nicholas Ruggeri",
   "devDependencies": {
-    "browser-sync": "^1.3.7",
-    "gulp": "^3.8.8",
+    "browser-sync": "1.3.7",
+    "gulp": "3.8.8",
     "gulp-autoprefixer": "1.0.0",
-    "gulp-concat": "^2.5.2",
-    "gulp-rename": "^1.2.2",
+    "gulp-concat": "2.5.2",
+    "gulp-if": "1.2.5",
+    "gulp-rename": "1.2.2",
     "gulp-sass": "^0.7.3",
-    "gulp-uglify": "^1.2.0",
-    "run-sequence": "^1.1.0"
+    "gulp-sourcemaps": "1.5.2",
+    "gulp-uglify": "1.2.0",
+    "run-sequence": "1.1.0"
   },
   "repository": {
     "type": "git",
