@@ -1,5 +1,8 @@
-@import "reset";
+@import "../_vendor/normalize-scss/normalize";
+
+@import "demo";
 
 body {
-    background: white;
+    background: #fff;
 }
+
