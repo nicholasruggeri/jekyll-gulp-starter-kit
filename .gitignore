@@ -1,9 +1,7 @@
 .DS_Store
 node_modules
-_assets/_vendor
-_site
-site
-css
-img
-js
-vendor
+src/_assets/_vendor
+web
+
+src/js
+src/css
