@@ -13,5 +13,9 @@
     "_src/vendor",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "cookies-enabler": "0.1.3",
+    "normalize-scss": "3.0.3"
+  }
 }
