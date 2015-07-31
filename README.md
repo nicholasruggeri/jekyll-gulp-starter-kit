@@ -10,6 +10,7 @@ To use this starter project, you'll need the following things installed on your 
 1. [Jekyll](http://jekyllrb.com/) - `$ gem install jekyll`
 2. [NodeJS](http://nodejs.org) - use the installer.
 3. npm install (mac users may need sudo)
+4. bower install
 
 ## Local Installation
 
