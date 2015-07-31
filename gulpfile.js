@@ -95,7 +95,7 @@ gulp.task('watch', function () {
     gulp.watch('_assets/_scss/*.scss', ['sass']);
     gulp.watch('_assets/_js/**/*.js', ['js']);
     gulp.watch('_assets/_img/**/*', ['img']);
-    gulp.watch(['_src/*.html', '_src/_layouts/*.html', '_src/_includes/*.html'], ['jekyll-rebuild']);
+    gulp.watch(['_src/**/*.html'], ['jekyll-rebuild']);
 });
 
 gulp.task('build', function(callback) {
