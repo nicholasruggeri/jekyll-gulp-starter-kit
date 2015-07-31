@@ -25,12 +25,6 @@ Clone this repo, or download it into a directory of your choice.
 This will give you file watching, browser synchronisation, auto-rebuild, CSS injecting etc etc.
 
 ```shell
-$ gulp serve
-```
-
-Default task, running just `gulp` will compile the assets and compile the jekyll site
-
-```shell
 $ gulp
 ```
 
